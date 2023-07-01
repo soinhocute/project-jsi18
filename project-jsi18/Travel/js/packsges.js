@@ -27,8 +27,8 @@ querySnapshot.forEach((doc) => {
   bag += `
   <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
   <div class="package-item">
-      <div class="overflow-hidden">
-          <img class="img-fluid" style="max-width: 100%;height: auto;" src="${doc.data().link}" alt="">
+      <div class="overflow-hidden" style="width: 465px;height: 300px;">
+          <img class="img-fluid" style="width:465p;height: 300px; " src="${doc.data().link}" alt="">
       </div>
       <div class="d-flex border-bottom">
           <small class="flex-fill text-center border-end py-2"><i class="fa fa-map-marker-alt text-primary me-2"></i>${
