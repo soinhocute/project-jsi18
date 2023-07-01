@@ -30,7 +30,7 @@ signInWithEmailAndPassword(auth, Email.value, Password.value)
     const user = userCredential.user;
     console.log(userCredential.user,"Dang nhap thanh cong")
     alert("Đăng nhập thành công")
-    window.location.replace("../index.html")
+    window.location.replace("../index2.html")
     document.getElementById("title01").innerHTML = Email.value
     // ...
     

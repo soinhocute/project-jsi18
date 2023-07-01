@@ -103,19 +103,16 @@ const auth = getAuth(app);
   });
 })(jQuery);
 
-onAuthStateChanged(auth, (user) => {
-  // => Công dụng: xác định web của mình đã có người đăng nhập hay chưa ?
-  if (user) {
-    console.log("có ng dùng")
-    btn_order.classList.remove("turn_off")
+// onAuthStateChanged(auth, (user) => {
+//   // => Công dụng: xác định web của mình đã có người đăng nhập hay chưa ?
+//   if (user) {
+//     console.log("có ng dùng")
+//     btn_order.classList.remove("turn_off")
     
-  } else {
-    btn_order.classList.add("turn_off")
-    console.log("not have any signed in user !");
-  }
-});
+//   } else {
+//     btn_order.classList.add("turn_off")
+//     console.log("not have any signed in user !");
+//   }
+// });
 
-const select = document.getElementById("select")
-document.getElementById("log").onclick = () => {
-  console.log("select", typeof(select), ":", select)
-}
+
