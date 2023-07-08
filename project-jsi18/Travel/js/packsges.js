@@ -18,7 +18,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const pk_render = document.getElementById("packages_render");
-var bag;
+var bag = "";
 
 
 const querySnapshot = await getDocs(collection(db, "Admins"));
@@ -28,7 +28,7 @@ querySnapshot.forEach((doc) => {
   <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
   <div class="package-item">
       <div class="overflow-hidden" style="width: 465px;height: 300px;">
-          <img class="img-fluid" style="width:465p;height: 300px; " src="${doc.data().link}" alt="">
+          <img class="img-fluid" style="width:465p;height: 300px;" src="${doc.data().link}" alt="">
       </div>
       <div class="d-flex border-bottom">
           <small class="flex-fill text-center border-end py-2"><i class="fa fa-map-marker-alt text-primary me-2"></i>${
