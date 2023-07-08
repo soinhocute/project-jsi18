@@ -24,25 +24,33 @@ const Password = document.getElementById("Password")
 
 
 document.getElementById("Signin").onclick = () =>{
-signInWithEmailAndPassword(auth, Email.value, Password.value)
-  .then((userCredential) => {
-    // Signed in 
-    const user = userCredential.user;
-    console.log(userCredential.user,"Dang nhap thanh cong")
-    alert("Đăng nhập thành công")
-    window.location.replace("../index2.html")
-    document.getElementById("title01").innerHTML = Email.value
-    // ...
-    
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = errorCode.message;
-    console.log(errorMessage,"Dang nhap that bai")
-    console.log("lỗi: ", error)
-    alert("Đăng nhập thất bại")
-  });
-}
+  signInWithEmailAndPassword(auth, Email.value, Password.value)
+    if((Email.value == "Update@gmail.com" && Password.value == "12345678") ){
+      alert("Đăng nhập admin Update")
+      window.location.replace("/update/index.html")
+    }
+    if((Email.value == "Delete@gmail.com" && Password.value == "12345678") ){
+      window.location.replace("/delete/index.html")
+    }
+    else{
+    then((userCredential) => {
+      // Signed in 
+      const user = userCredential.user;
+      console.log(userCredential.user,"Dang nhap thanh cong")
+      alert("Đăng nhập thành công")
+      window.location.replace("../index2.html")
+      document.getElementById("title01").innerHTML = Email.value
+      // ...  
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = errorCode.message;
+      console.log(errorMessage,"Dang nhap that bai")
+      console.log("lỗi: ", error)
+      alert("Đăng nhập thất bại")
+    });
+  }
+  }
 
 
     
