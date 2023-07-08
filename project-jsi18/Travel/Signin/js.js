@@ -26,11 +26,12 @@ const Password = document.getElementById("Password")
 document.getElementById("Signin").onclick = () =>{
   signInWithEmailAndPassword(auth, Email.value, Password.value)
     if((Email.value == "Update@gmail.com" && Password.value == "12345678") ){
-      alert("Đăng nhập admin Update")
+      alert("Đã đăng nhập admin Update")
       window.location.replace("/update/index.html")
     }
     if((Email.value == "Delete@gmail.com" && Password.value == "12345678") ){
       window.location.replace("/delete/index.html")
+      alert("Đã đăng nhập admin Delete")
     }
     else{
     then((userCredential) => {
