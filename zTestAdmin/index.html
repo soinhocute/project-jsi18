@@ -4,12 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        table{
+            font-size: 17px;
+            margin-bottom: 10px;
+        }
+        tr{
+            justify-content:left;
+            text-align: left;    
+        }
+        th,td,thead {
+            border-bottom: 1px solid #000;
+        }
+    </style>
 </head>
 <body>
     <h1>Order</h1>
-    <table class="table" id="render">
+    <table  class="table" id="render">
         <thead>
-            <tr style="width: 300px;">
+            <tr >
                 <th>Name</th>
                 <th>Email</th>
                 <th>Message</th>
@@ -18,5 +31,7 @@
             </tr>
         </thead>
     </table>
+
+    <script type="module" src="./js.js"></script>
 </body>
 </html>

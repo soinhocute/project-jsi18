@@ -1,10 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
-import {
-  getFirestore,
-  collection,
-  getDocs,
-  doc,
-} from "https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore.js";
+import {getFirestore,collection,getDocs,} from "https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyDuL-CyR0vWvZRTkFwD_dhq0yq8iXnw3iU",
@@ -16,20 +11,17 @@ const firebaseConfig = {
     measurementId: "G-SK5FN4PYXP",
   };
 
-const Name = document.getElementById("Name")
-const Email = document.getElementById("Email")
-const Message = document.getElementById("Message")
-const Destination = document.getElementById("destination")
-const DateTime = document.getElementById("Name")
-const table = document.getElementById("table")
-
-
+var table = document.getElementsByClassName("table")
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-
 const querySnapshot = await getDocs(collection(db, "Ticket"));
+querySnapshot.forEach((doc) => {
+  // doc.data() is never undefined for query doc snapshots
+  console.log(doc.id, " => ", doc.data());
+});
+
 table = `
 <div>
 <tr>
@@ -38,6 +30,7 @@ table = `
   <th>Message</th>
   <th>Destination</th>
   <th>DateTime</th>
+  <th>id</th>
 </tr>
 <div/>`;
 querySnapshot.forEach((doc) => {
@@ -46,10 +39,10 @@ querySnapshot.forEach((doc) => {
         <td>${doc.data().Name}</td>
         <td>${doc.data().Email}</td>
         <td>${doc.data().Message}</td>
-        <td>${doc.data().Destination}</td>
+        <td>${doc.data().destination}</td>
         <td>${doc.data().DateTime}</td>
         <td>${doc.id} </td>
       </tr>`;
 })
-
 document.getElementById("render").innerHTML = table;
+
