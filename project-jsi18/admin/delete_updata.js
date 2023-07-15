@@ -87,7 +87,7 @@ querySnapshot.forEach((item) => {
   newBtn.setAttribute("class", "btn btn-sm btn-primary px-3 border-end");
   Btn.setAttribute("id", `${item.id}`);
   Btn.setAttribute("class", "btn btn-sm btn-primary px-3 border-end");
-  newBtn.innerHTML = "Xóa~";
+  newBtn.innerHTML = "Xóa";
   Btn.innerHTML = "Sửa";
   newBtn.addEventListener("click", handleDelete);
   Btn.addEventListener("click", handleUpdate);

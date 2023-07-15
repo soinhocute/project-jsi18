@@ -10,31 +10,34 @@
 </head>
 <body>
     <div>
-        <label for="">Country</label>
+        <label style="margin-right: 10px;" for="">Country:</label>
         <input type="text" id="country">
     </div>
     <div>
-        <label for="">Cost</label>
+        <label style="margin-right: 33px;" for="">Cost:</label>
         <input type="number" id="cost">
     </div>
     <div>
-        <label for="">Link img</label>
+        <label style="margin-right: 7px;" for="">Link img:</label>
         <input type="text" id="link">
     </div>
     <div>
-        <label for="">Days</label>
+        <label style="margin-right: 30px;" for="">Days:</label>
         <input type="text" id="days">
     </div>
     <div>
-        <label for="">Person</label>
+        <label style="margin-right: 17px;" for="">Person:</label>
         <input type="text" id="person">
     </div>
     <div>
-        <label for="">Contents</label>
+        <label style="margin-right: 4px;" for="">Contents:</label>
         <input type="text" id="content">
     </div>
     <div>
-        <button id="add">submit</button>
+        <button id="add" class="btn btn-sm btn-primary px-3 border-end">submit</button>
+        <button class="btn btn-sm btn-primary px-3 border-end">
+            <a style="color: white;" href="../zTestAdmin/index.html">order</a>
+        </button>
     </div>
     
 
@@ -47,6 +50,7 @@
                 <th>Days</th>
                 <th>Person</th>
                 <th>Content</th>
+                <th>Id</th>
             </tr>
         </thead>
         <tbody id="table_body">

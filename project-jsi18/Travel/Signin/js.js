@@ -1,4 +1,3 @@
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
 import { getAuth, signInWithEmailAndPassword,} from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
 
@@ -25,12 +24,8 @@ const Password = document.getElementById("Password")
 
 document.getElementById("Signin").onclick = () =>{
   signInWithEmailAndPassword(auth, Email.value, Password.value)
-    if( (Email.value == "admin@gmail.com" && Password.value == "12345678") ){
-      alert("Đăng nhập admin thành công")
-      window.location.replace("../admin/index.html")
-    }
-    else{
-    then((userCredential) => {
+    
+    .then((userCredential) => {
       // Signed in 
       const user = userCredential.user;
       console.log(userCredential.user,"Dang nhap thanh cong")
@@ -47,10 +42,6 @@ document.getElementById("Signin").onclick = () =>{
       alert("Đăng nhập thất bại")
     });
   }
-  }
 
 
-    
-
-
-
+  
