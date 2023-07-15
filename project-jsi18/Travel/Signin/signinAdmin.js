@@ -26,7 +26,7 @@ document.getElementById("Signin").onclick = () =>{
   signInWithEmailAndPassword(auth, Email.value, Password.value)
     if( (Email.value == "admin@gmail.com" && Password.value == "12345678") ){
       alert("Đăng nhập admin thành công")
-      window.location.replace("/admin/index.html")
+      window.location.replace("../admin/index.html")
     }
     else{
       alert("Đăng nhập thất bại")
